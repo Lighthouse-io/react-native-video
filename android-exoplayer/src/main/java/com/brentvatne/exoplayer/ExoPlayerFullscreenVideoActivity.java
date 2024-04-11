@@ -49,7 +49,7 @@ public class ExoPlayerFullscreenVideoActivity extends AppCompatActivity implemen
         playerControlView.setPlayer(player);
         // Set the fullscreen button to "close fullscreen" icon
         ImageView fullscreenIcon = playerControlView.findViewById(R.id.exo_fullscreen_icon);
-        fullscreenIcon.setImageResource(R.drawable.exo_controls_fullscreen_exit);
+        fullscreenIcon.setImageResource(com.google.android.exoplayer2.R.drawable.exo_controls_fullscreen_exit);
         playerControlView.findViewById(R.id.exo_fullscreen_button)
                 .setOnClickListener(v -> {
                     if (exoplayerView != null) {
@@ -57,7 +57,7 @@ public class ExoPlayerFullscreenVideoActivity extends AppCompatActivity implemen
                     }
                 });
         //Handling the playButton click event
-        playerControlView.findViewById(R.id.exo_play).setOnClickListener(v -> {
+        playerControlView.findViewById(com.google.android.exoplayer2.R.id.exo_play).setOnClickListener(v -> {
             if (player != null && player.getPlaybackState() == Player.STATE_ENDED) {
                 player.seekTo(0);
             }
@@ -67,7 +67,7 @@ public class ExoPlayerFullscreenVideoActivity extends AppCompatActivity implemen
         });
 
         //Handling the pauseButton click event
-        playerControlView.findViewById(R.id.exo_pause).setOnClickListener(v -> {
+        playerControlView.findViewById(com.google.android.exoplayer2.R.id.exo_pause).setOnClickListener(v -> {
             if (exoplayerView != null) {
                 exoplayerView.setPausedModifier(true);
             }
